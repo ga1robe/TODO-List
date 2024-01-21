@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=, initial-scale=1.0">
+        <title>MMCSchool - TODO Advanced List</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/71edcedf0e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body cz-shortcut-listen="true">
+        <div class="todo">
+            <div class="header">
+                <h1>ToDo List</h1>
+                <input type="text" value="" class="todo-input" placeholder="Enter the task content...">
+                <button class="add-btn">Add</button>
+                <h3>End time:</h3>
+                <table class="date">
+                    <tr>
+                        <td><label for="task-time">Time</label></td>
+                        <td><label for="task-date">Date</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="time" name="task-time" id="task-time" min="00:00" max="23:59" value="12:00"></td>
+                        <td><input type="date" name="task-date" id="task-date" min="2024-01-01" max="2025-01-01" value="2024-01-19"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="todolist">
+                <h3>Task List:</h3>
+                <p class="warn-info"><!-- No Task in this list.--></p>
+                <ul></ul>
+            </div>
+        </div>
+        <div class="popup">
+            <h3>Edit Task:</h3>
+            <div class="popup-body">
+                <p class="popup-info"></p>
+                <input type="text" class="popup-input" placeholder="Enter new task content...">
+                <table class="date">
+                    <tr>
+                        <td><label for="task-time">Time</label></td>
+                        <td><label for="task-date">Date</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="time" name="task-time" id="task-time" min="00:00" max="23:59" value="12:00"></td>
+                        <td><input type="date" name="task-date" id="task-date" min="2024-01-01" max="2025-01-01" value="2024-01-19"></td>
+                    </tr>
+                </table>
+                <button class="popup-btn accept">Accept</button>
+                <button class="popup-btn cancel">Cancel</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

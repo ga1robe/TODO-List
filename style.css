@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --deep-dark: rgb(26, 26, 26);
+    --light-dark: rgb(79, 82, 92);
+    --light-blue: rgb(0, 132, 255);
+    --dark-blue: rgb(2, 84, 161);
+    --light: rgb(245, 245, 245);
+}
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
+}
+h1 {color: var(--light);margin-bottom: 20px;text-transform: uppercase;}
+h3 {color: var(--light);margin-top: 20px;text-transform: uppercase;}
+.fas {pointer-events: none;}
+.todo {
+    width: 800px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 4px 4px 5px rgba(82, 82, 82, .4);
+    border-radius: 5px;
+}
+.header {
+    border-radius: 5px 5px 0 0;
+    padding: 40px;
+    background-image: linear-gradient(340deg, #045de9 0%, #09c6f9 100%);
+}
+.todo-input {
+    width: 80%;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-dark);
+    background-color: var(--light);
+}
+.warn-info {margin-top: 20px;color: var(--dark-blue);}
+.date {
+    width: 20%;
+    padding: 10px 20px;
+    margin-left: 222px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-dark);
+    background-color: var(--light);
+}
+.add-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    color: var(--deep-blue);
+    background-color: var(--light);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color .3s, background-color .3s;
+}
+.add-btn:hover {color: #fff;background-color: var(--light-dark);}
+.todolist {padding: 20px 0;}
+.todolist h3 {text-transform: uppercase;margin-bottom: 16px;}
+.todolist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    padding-left: 20px;
+    text-align: left;
+    list-style: none;
+    background-color: var(--light);
+}
+.tools {display: inline-block;}
+.tools button {
+    padding: 15px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+.tools button:hover {background-color: #ddd;}
+.complete {color: var(--light-blue);}
+.time {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(15, 179, 69);
+    display: inline-block;
+    margin-right:10px;
+    cursor: auto;
+}
+.critical-time {font-weight: bold;color: firebrick;}
+.edit {font-weight: bold;color: rgb(15, 179, 69);}
+.edit.disable {
+    font-weight: normal;
+    color: rgb(121, 156, 129);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.delete {color: crimson;}
+.completed {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--light-dark);
+    text-decoration: line-through;
+}
+.popup {
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    color: var(--light);
+    background-color: var(--light-dark);
+    border-radius: 5px;
+}
+.popup h3 {padding: 20px;}
+.popup-info {color: var(--light);margin-bottom: 20px;}
+.popup-body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 10px;
+}
+.popup-input {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--light-dark);
+    background-color: var(--light);
+}
+.popup-btn {
+    width: 30%;
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--deep-dark);
+    background-color: var(--light);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color .3s, background-color .3s;
+}
+.popup-btn:hover {color: #fff;background-color: var(--light-blue);}
